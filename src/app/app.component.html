@@ -1,0 +1,25 @@
+  <h1>{{title}}</h1>
+<div class="container-fixed" >
+  
+  <div  style="background-color:grey;">
+    <div class="row" >
+<div class="search-hero">
+<input class="form-control" type="text" name="search" [(ngModel)]="searchText"  placeholder="Search">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+        <th>ID</th>
+        <th>SAMPLE NAME</th>
+        <th>COUNTRY</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let hero of heroes | filter:searchText">
+        <td>{{hero.id}}</td>
+        <td>{{hero.name}}</td>
+        <td>{{hero.country}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div></div>
+  </div></div>
